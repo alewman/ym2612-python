@@ -2,7 +2,7 @@
  "version": 1,
  "name": "ic-pulses-ym2612",
  "variant": "ym2612",
- "ticks": 374849,
+ "ticks": 377433,
  "events": [
   {
    "t": 336,
@@ -65,1249 +65,1249 @@
    "data": 240
   },
   {
-   "t": 9408,
+   "t": 9450,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 9428,
+   "t": 9470,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 9828,
+   "t": 9870,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 12852,
+   "t": 12894,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 13356,
+   "t": 13398,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 17893,
+   "t": 17977,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 17913,
+   "t": 17997,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 18019,
+   "t": 18103,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 21042,
+   "t": 21127,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 21546,
+   "t": 21631,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 26084,
+   "t": 26211,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 26104,
+   "t": 26231,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 28604,
+   "t": 28731,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 31626,
+   "t": 31755,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 32130,
+   "t": 32259,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 36669,
+   "t": 36840,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 36689,
+   "t": 36860,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 36711,
+   "t": 36882,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 39732,
+   "t": 39906,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 40236,
+   "t": 40410,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 44776,
+   "t": 44992,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 44796,
+   "t": 45012,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 44818,
+   "t": 45034,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 47838,
+   "t": 48058,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 48342,
+   "t": 48562,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 52883,
+   "t": 53145,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 52903,
+   "t": 53165,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 52925,
+   "t": 53187,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 55944,
+   "t": 56211,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 56448,
+   "t": 56715,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 60990,
+   "t": 61299,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 61010,
+   "t": 61319,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 61410,
+   "t": 61719,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 64428,
+   "t": 64743,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 64932,
+   "t": 65247,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 69475,
+   "t": 69832,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 69495,
+   "t": 69852,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 69517,
+   "t": 69874,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 72534,
+   "t": 72898,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 73038,
+   "t": 73402,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 77582,
+   "t": 77988,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 77602,
+   "t": 78008,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 77708,
+   "t": 78114,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 80724,
+   "t": 81138,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 81228,
+   "t": 81642,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 85773,
+   "t": 86229,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 85793,
+   "t": 86249,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 85815,
+   "t": 86271,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 88830,
+   "t": 89295,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 89334,
+   "t": 89799,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 93880,
+   "t": 94387,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 93900,
+   "t": 94407,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 93922,
+   "t": 94429,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 96936,
+   "t": 97453,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 97440,
+   "t": 97957,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 101987,
+   "t": 102546,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 102007,
+   "t": 102566,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 104507,
+   "t": 105066,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 107520,
+   "t": 108090,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 108024,
+   "t": 108594,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 112572,
+   "t": 113184,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 112592,
+   "t": 113204,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 115092,
+   "t": 115704,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 118104,
+   "t": 118728,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 118608,
+   "t": 119232,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 123157,
+   "t": 123823,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 123177,
+   "t": 123843,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 123199,
+   "t": 123865,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 126210,
+   "t": 126889,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 126714,
+   "t": 127393,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 131264,
+   "t": 131985,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 131284,
+   "t": 132005,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 131390,
+   "t": 132111,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 134400,
+   "t": 135135,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 134904,
+   "t": 135639,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 139455,
+   "t": 140232,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 139475,
+   "t": 140252,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 139497,
+   "t": 140274,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 142506,
+   "t": 143298,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 143010,
+   "t": 143802,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 147562,
+   "t": 148396,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 147582,
+   "t": 148416,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 150082,
+   "t": 150916,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 153090,
+   "t": 153940,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 153594,
+   "t": 154444,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 158147,
+   "t": 159039,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 158167,
+   "t": 159059,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 158189,
+   "t": 159081,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 161196,
+   "t": 162105,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 161700,
+   "t": 162609,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 166254,
+   "t": 167205,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 166274,
+   "t": 167225,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 166296,
+   "t": 167247,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 169302,
+   "t": 170271,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 169806,
+   "t": 170775,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 174361,
+   "t": 175372,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 174381,
+   "t": 175392,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 174487,
+   "t": 175498,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 177492,
+   "t": 178522,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 177996,
+   "t": 179026,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 182552,
+   "t": 183624,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 182572,
+   "t": 183644,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 182594,
+   "t": 183666,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 185598,
+   "t": 186690,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 186102,
+   "t": 187194,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 190659,
+   "t": 191793,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 190679,
+   "t": 191813,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 193179,
+   "t": 194313,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 196182,
+   "t": 197337,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 196686,
+   "t": 197841,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 201244,
+   "t": 202441,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 201264,
+   "t": 202461,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 201286,
+   "t": 202483,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 204288,
+   "t": 205507,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 204792,
+   "t": 206011,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 209351,
+   "t": 210612,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 209371,
+   "t": 210632,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 209477,
+   "t": 210738,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 212478,
+   "t": 213762,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 212982,
+   "t": 214266,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 217542,
+   "t": 218868,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 217562,
+   "t": 218888,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 217584,
+   "t": 218910,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 220584,
+   "t": 221934,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 221088,
+   "t": 222438,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 225649,
+   "t": 227041,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 225669,
+   "t": 227061,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 225775,
+   "t": 227167,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 228774,
+   "t": 230191,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 229278,
+   "t": 230695,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 233840,
+   "t": 235299,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 233860,
+   "t": 235319,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 234260,
+   "t": 235719,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 237258,
+   "t": 238743,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 237762,
+   "t": 239247,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 242325,
+   "t": 243852,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 242345,
+   "t": 243872,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 244845,
+   "t": 246372,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 247842,
+   "t": 249396,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 248346,
+   "t": 249900,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 252910,
+   "t": 254506,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 252930,
+   "t": 254526,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 253036,
+   "t": 254632,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 256032,
+   "t": 257656,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 256536,
+   "t": 258160,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 261101,
+   "t": 262767,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 261121,
+   "t": 262787,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 261143,
+   "t": 262809,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 264138,
+   "t": 265833,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 264642,
+   "t": 266337,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 269208,
+   "t": 270945,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 269228,
+   "t": 270965,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 269628,
+   "t": 271365,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 272622,
+   "t": 274389,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 273126,
+   "t": 274893,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 277693,
+   "t": 279502,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 277713,
+   "t": 279522,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 277819,
+   "t": 279628,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 280812,
+   "t": 282652,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 281316,
+   "t": 283156,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 285884,
+   "t": 287766,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 285904,
+   "t": 287786,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 285926,
+   "t": 287808,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 288918,
+   "t": 290832,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 289422,
+   "t": 291336,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 293991,
+   "t": 295947,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 294011,
+   "t": 295967,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 294117,
+   "t": 296073,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 297108,
+   "t": 299097,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 297612,
+   "t": 299601,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 302182,
+   "t": 304213,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 302202,
+   "t": 304233,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 302602,
+   "t": 304633,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 305592,
+   "t": 307657,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 306096,
+   "t": 308161,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 310667,
+   "t": 312774,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 310687,
+   "t": 312794,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 310709,
+   "t": 312816,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 313698,
+   "t": 315840,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 314202,
+   "t": 316344,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 318774,
+   "t": 320958,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 318794,
+   "t": 320978,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 318816,
+   "t": 321000,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 321804,
+   "t": 324024,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 322308,
+   "t": 324528,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 326881,
+   "t": 329143,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 326901,
+   "t": 329163,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 326923,
+   "t": 329185,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 329910,
+   "t": 332209,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 330414,
+   "t": 332713,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 334988,
+   "t": 337329,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 335008,
+   "t": 337349,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 335114,
+   "t": 337455,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 338100,
+   "t": 340479,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 338604,
+   "t": 340983,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 343179,
+   "t": 345600,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 343199,
+   "t": 345620,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 345699,
+   "t": 348120,
    "kind": "ic",
    "held": false,
    "lag": 0
   },
   {
-   "t": 348684,
+   "t": 351144,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 349188,
+   "t": 351648,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 353764,
+   "t": 356266,
    "kind": "ic",
    "held": true,
    "lag": 3
   },
   {
-   "t": 353784,
+   "t": 356286,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 356284,
+   "t": 358786,
    "kind": "ic",
    "held": false,
    "lag": 3
   },
   {
-   "t": 359268,
+   "t": 361810,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 359772,
+   "t": 362314,
    "kind": "write",
    "port": 1,
    "data": 240
   },
   {
-   "t": 364349,
+   "t": 366933,
    "kind": "ic",
    "held": true,
    "lag": 0
   },
   {
-   "t": 364369,
+   "t": 366953,
    "kind": "write",
    "port": 0,
    "data": 40
   },
   {
-   "t": 364769,
+   "t": 367353,
    "kind": "ic",
    "held": false,
    "lag": 0

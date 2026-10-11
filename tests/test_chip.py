@@ -132,6 +132,24 @@ def test_ym2612_timer_a_overflows_after_its_reload() -> None:
     assert 1024 - reload_value - 2 <= samples <= 1024 - reload_value + 2
 
 
+def test_the_driven_status_decays_after_its_hold() -> None:
+    """The value a read drives is held for 300,000 cycles on the YM2612 and 40,000,000
+    on the YM3438, then reads 0 (``ym3438.c`` ``OPN2_Read``, ``status_time``). On the
+    discrete chip it shows through ports 1-3, which return the held value without
+    driving a new one; on the ASIC every port drives afresh, so only the hold shows.
+    Run on the quiet path, which keeps the timers and the decay."""
+    for cycles, expected in ((299_990, 0x80), (300_000, 0x00)):
+        chip = YM2612(FM_DISCRETE, enabled=False)
+        chip.write(1, 0x00)  # a data write: BUSY
+        chip.run(3 * 42)
+        assert chip.read(0) == 0x80
+        chip.run(chip.mclk + cycles * 42)
+        assert chip.read(1) == expected, cycles
+    chip = YM2612(YM3438_ASIC, enabled=False)
+    chip.read(2)
+    assert chip.status_time == 40_000_000
+
+
 def test_ladder_is_a_variant_field_and_changes_the_output() -> None:
     """The discrete chip drives the sign in the gaps and multiplies by three; the ASIC
     drives zero and does not (``ym3438.c`` ``OPN2_ChOutput``)."""
