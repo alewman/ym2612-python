@@ -70,7 +70,7 @@ runs further now.
 The conformance examples' traces are checked against the referee too, not just
 against this chip. `tests/test_conformance.py` replays every example Nuked-OPN2 can
 model (generator on, no /IC, no timer delay) through `opn2_ref` and compares every
-`C` line: 8 of the 11, identical.
+`C` line: 10 of the 13, identical.
 
 ### YM2608-LLE: a detector, with its differences classified
 
@@ -145,6 +145,19 @@ the board, so they stay there:
 
 `tests/test_chip.py` pins the outcomes, and the conformance example
 `ic-pulses-ym2612` puts /IC at all 42 ticks of a cycle.
+
+### Coverage
+
+`coverage run --branch` over the fast suite (`pytest -m "not referee"`: the rules, the
+tables, the thirteen examples) at this commit: **99% of `chip.py`'s statements, 98%
+with branches**. What it does not reach:
+- the test read's channel-accumulator form;
+- a re-key while an envelope is still in attack;
+- a sample owed while the hold outlasts a short /IC pulse;
+- the operator's level clamp at 0x1FFF.
+
+The clamp is unreachable: `LOG_SIN` peaks at 2,137 and an envelope at 4,092, which
+sum to less. The die has the clamp, so the code keeps it.
 
 ### Seeded faults
 

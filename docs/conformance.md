@@ -83,16 +83,18 @@ the reference trace.
 
 ## The examples
 
-`examples/conformance/` holds nine manifests with their reference traces, written by
+`examples/conformance/` holds thirteen manifests with their reference traces, written by
 `scripts/make_examples.py`. `tests/test_conformance.py` checks two things. First,
 that this chip still writes every trace. Second, with the referee built, that the
-six examples Nuked-OPN2 can model (generator on, no /IC, no timer delay) agree with
+ten examples Nuked-OPN2 can model (generator on, no /IC, no timer delay) agree with
 it on every `C` line. The examples are therefore themselves referee-checked, not
 just this chip's say-so.
 
 | Manifest | Aimed at |
 | --- | --- |
 | `random-walk-ym2612`, `random-walk-ym3438` | every register, both output stages, 250 writes each |
+| `voices-ym2612`, `voices-ym3438` | six sounding channels: every algorithm and feedback, both detune signs, a multiplier of 0, a sustain level of 15, every pan, LFO AM and PM at two speeds, channel 3's own frequencies, an accumulator that clamps |
+| `corners-ym2612`, `corners-ym3438` | the LSI test registers $21 and $2C (and the test read), the SSG's absent $00-$0F, key-on bytes naming no channel, re-keys, reads on every port |
 | `dac-ym2612` | the DAC enable, a value ramp, the ninth bit |
 | `ssg-eg-ym3438` | SSG-EG's eight shapes |
 | `status-reads-ym2612`, `status-reads-ym3438` | BUSY and both timer flags read on every port at ticks inside cycles (the variants differ on ports 1-3) |

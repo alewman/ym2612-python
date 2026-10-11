@@ -95,7 +95,7 @@ python -m ym2612_python.conformance diff examples/conformance/voices-ym2612.json
 
 A manifest names the variant and the timed writes, reads and /IC events. The trace
 has a line for every internal cycle (the slot, both pins, status, IRQ, or *held*)
-and one for every read. Eleven example manifests ship with reference traces, eight of
+and one for every read. Thirteen example manifests ship with reference traces, ten of
 them checked against Nuked-OPN2 by the tests. See
 [docs/conformance.md](docs/conformance.md).
 

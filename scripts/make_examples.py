@@ -47,6 +47,50 @@ def random_walk(seed: int, count: int) -> list[dict]:
     return _writes(run_fm_streams.stream_random(seed, count))
 
 
+def corners(seed: int, count: int) -> list[dict]:
+    """A random walk over the corners the plain walk never writes: the LSI test
+    registers $21 and $2C, the SSG's absent $00-$0F, key-on bytes naming no channel,
+    fast re-keys during attack, and full-level operators. Notes are kept sounding."""
+    rng = random.Random(seed)
+    events: list[dict] = []
+    t = 8 * TICK
+    for channel in range(3):
+        for op in range(4):
+            for register, value in ((0x30, 0x01 + op), (0x40, 0x00), (0x50, 0x1F),
+                                    (0x60, 0x05), (0x80, 0x24)):  # fmt: skip
+                t = _write(events, t, register + op * 4 + channel, value)
+        t = _write(events, t, 0xB0 + channel, 0x38 | channel * 3)
+        t = _write(events, t, 0xB4 + channel, 0xC0)
+        t = _write(events, t, 0xA4 + channel, 0x22)
+        t = _write(events, t, 0xA0 + channel, 0x69 - channel * 9)
+    corner = (
+        [0x21, 0x2C, 0x28, 0x28, 0x28, 0x50, 0x40, 0x2A, 0x2B]
+        + list(range(0x00, 0x10))
+        + [0x100 + r for r in range(0x00, 0x10)]
+    )
+    for _ in range(count):
+        register = rng.choice(corner)
+        if register == 0x21:
+            value = rng.choice((0x00, 0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0xC0))
+        elif register == 0x2C:
+            value = rng.choice((0x00, 0x00, 0x08, 0x10, 0x20, 0x40, 0x80, 0xC0))
+        elif register == 0x28:
+            value = rng.choice((0xF0, 0xF1, 0xF2, 0xF3, 0xF7, 0x00, 0x03, 0xF4))
+        elif register == 0x40:
+            value = 0x00 if rng.random() < 0.5 else rng.randrange(0x80)
+        elif register == 0x50:
+            value = rng.choice((0x1F, 0x1E, 0x10, 0xDF))
+        else:
+            value = rng.randrange(256)
+        t = _write(events, t, register + rng.choice((0, 1, 2)) * (register >= 0x30), value)
+        if rng.random() < 0.3:  # a read, which $21 bit 6 turns into the test read
+            events.append({"t": t + rng.randrange(TICK), "kind": "read", "port": rng.randrange(4)})
+        t += rng.randrange(1, 160) * TICK
+    for register in (0x21, 0x2C):
+        t = _write(events, t, register, 0x00)
+    return events
+
+
 def dac() -> list[dict]:
     """The DAC enabled, a ramp over part of its range, then the ninth bit and disabled."""
     events: list[dict] = []
@@ -190,6 +234,8 @@ MANIFESTS = [
     ("random-walk-ym2612", "ym2612", lambda: random_walk(3, 250), {}),
     ("random-walk-ym3438", "ym3438", lambda: random_walk(4, 250), {}),
     ("dac-ym2612", "ym2612", dac, {}),
+    ("corners-ym2612", "ym2612", lambda: corners(5, 300), {}),
+    ("corners-ym3438", "ym3438", lambda: corners(6, 300), {}),
     ("voices-ym2612", "ym2612", voices, {}),
     ("voices-ym3438", "ym3438", voices, {}),
     ("ssg-eg-ym3438", "ym3438", ssg_eg_short, {}),

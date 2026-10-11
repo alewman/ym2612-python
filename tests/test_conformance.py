@@ -25,7 +25,7 @@ REFEREES = ROOT / "reference" / "build-referees"
 
 
 def test_there_are_examples() -> None:
-    assert len(MANIFESTS) >= 9
+    assert len(MANIFESTS) >= 13
 
 
 @pytest.mark.parametrize("path", MANIFESTS, ids=lambda path: path.stem)
