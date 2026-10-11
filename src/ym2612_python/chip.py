@@ -1,10 +1,15 @@
 """The YM2612 (OPN2): six FM channels, channel 3's special mode, CSM, SSG-EG, the
 LFO, both timers, BUSY, the DAC, and the ladder effect as a variant field.
 
+Extracted from megadrive-python (``src/megadrive_python/ym2612.py`` at efcc6bb) with
+its history. A ``docs/...`` path below is megadrive-python's, at that commit, unless
+it names this repository: the measurements behind the chip's constants were made
+there, on a whole console against Nuked-MD, and are cited rather than repeated.
+
 Why this is a pipeline and not a per-sample FM loop
 ---------------------------------------------------
 
-Milestone 4's acceptance is sample-for-sample equality with two die-derived models
+megadrive-python's milestone 4 acceptance is sample-for-sample equality with two die-derived models
 (docs/handoff-brief.md), and there is no self-checking FM test ROM and no YM2612
 datasheet (docs/validation.md, "What is not available").  A textbook OPN2 -- compute
 each operator once per output sample, in channel order -- cannot meet that bar: the
@@ -34,8 +39,10 @@ The clock
 The chip runs at MCLK / 7 (7.67 MHz on NTSC) and divides that by 6, so one internal
 cycle is 42 MCLK and one output sample -- 24 cycles -- is 1,008 MCLK: 53,267 Hz on
 NTSC, 52,781 Hz on PAL (docs/timing.md, "Frame pacing").  :meth:`YM2612.run` takes a
-master clock and advances to it; :meth:`YM2612.write` and :meth:`YM2612.read` are
-the board's two ports.
+time in **ticks** and advances to it: seven ticks to one of the chip's input clocks, so a
+tick is the Mega Drive's master clock, and a host whose chip has its own oscillator counts
+seven ticks per input clock (docs/contract.md in this repository).  :meth:`YM2612.write`
+and :meth:`YM2612.read` are the chip's two ports.
 
 Cost
 ----
@@ -52,8 +59,29 @@ a run that does not want the sound needs and costs a fraction as much
 from __future__ import annotations
 
 import math
+from dataclasses import dataclass
 
-from .machine import FMVariant
+
+@dataclass(frozen=True)
+class FMVariant:
+    """The FM chip: the discrete NMOS YM2612 or the YM3438-like core in an ASIC.
+
+    ``busy_on_all_ports``: the BUSY flag reads on every port on the ASIC but on
+    port 0 only on the discrete YM2612 (Eke's measurements on a VA4 Model 1 and a VA0
+    Model 2, forum t=386 start=810; hardware-captured). ``ladder``: the DAC's
+    crossover distortion (HardWareMan's oscilloscope traces, Aly James's
+    ``MD1_LADDER.wav``; hardware-captured), absent on the ASIC.
+    """
+
+    name: str
+    busy_on_all_ports: bool
+    ladder: bool
+
+
+#: The discrete NMOS YM2612 (Mega Drive Model 1, early Model 2).
+YM2612_DISCRETE = FMVariant("YM2612 (discrete)", busy_on_all_ports=False, ladder=True)
+#: The YM3438-like core inside the later ASICs (and the discrete YM3438).
+YM3438_ASIC = FMVariant("YM3438-like core (ASIC)", busy_on_all_ports=True, ladder=False)
 
 # -- the chip's two ROMs ------------------------------------------------------------
 
@@ -427,7 +455,7 @@ class YM2612:
         #: Register writes counted since power-on (a cheap health check).
         self.writes = 0
 
-    # -- the board's side ---------------------------------------------------------
+    # -- the pins -----------------------------------------------------------------
 
     def reset_line(self, held: bool, mclk: int | None = None, lag: int = IC_SLOT_LAG) -> None:
         """The YM2612 shares /RESET with the Z80: "For as long as the Z80 is reset,
@@ -478,7 +506,7 @@ class YM2612:
 
         The discrete YM2612 answers on port 0 only; the ASIC answers on every port
         (Eke's counting program on a VA4 Model 1 and a VA0 Model 2, forum t=386
-        start=810; hardware-captured, :class:`~megadrive_python.machine.FMVariant`).
+        start=810; hardware-captured, :class:`FMVariant`).
         A port the chip does not answer on leaves the bus undriven, which on this
         board reads the 68000's prefetch -- the caller supplies that.  The value the
         chip drives decays after :data:`STATUS_TIME` cycles without a read
@@ -518,7 +546,8 @@ class YM2612:
     # -- time ---------------------------------------------------------------------
 
     def run(self, mclk: int) -> None:
-        """Advance to master clock ``mclk``."""
+        """Advance to tick ``mclk`` (seven ticks to an input clock; 42 to an internal
+        cycle). Whole internal cycles only: the remainder waits for the next call."""
         cycles = (mclk - self.mclk) // MCLK_PER_CYCLE
         if cycles <= 0:
             return
@@ -1251,8 +1280,8 @@ class YM2612:
           same value (``fmopna_impl.c`` lines 5824-5853), which is the corroboration
           this board relies on.
 
-        The choice is :attr:`FMVariant.ladder`, a field of the machine, not a branch
-        in the mixer.
+        The choice is :attr:`FMVariant.ladder`, a field of the variant, not a branch
+        in a mixer.
         """
         cycles = self.cycles
         channel = self.channel
