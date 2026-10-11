@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-"""Milestone 4's FM acceptance: the board's YM2612 against the two die-derived models.
+"""The FM acceptance: this chip against the two die-derived models, every cycle.
 
     python scripts/run_fm_streams.py                 # the synthetic streams
-    python scripts/run_fm_streams.py --roms --games  # and Nemesis's ROMs, and games
+    python scripts/run_fm_streams.py --streams       # and the exported board streams
     python scripts/run_fm_streams.py --lle           # also YM2608-LLE (slow)
 
 For each register stream the chip is run from power-on and **every** value of its two
@@ -17,7 +17,7 @@ The referees
 
 * **Nuked-OPN2** (``ym3438.c``, die-derived, LGPL-2.1) in both of its output modes:
   ``ym2612`` (the discrete NMOS part, with the ladder) and ``ym3438`` (the ASIC).
-  The board is run with the matching :class:`~megadrive_python.machine.FMVariant`.
+  This chip is run with the matching :class:`~ym2612_python.FMVariant`.
 * **YM2608-LLE** (``fmopna_2612.c``, die-derived, GPL-2.0): a *pin-level* model of
   the NMOS YM2612, clocked at MCLK / 7 with the write strobes driven.  Its DAC pins
   carry the same 9-bit value without Nuked's threefold amplification, and its
@@ -30,58 +30,30 @@ The streams
 * **synthetic**: a seeded random walk over the whole register space, and six aimed
   streams -- channel 3's special mode, CSM, SSG-EG's eight shapes, the LFO at all
   eight speeds with every PMS/AMS depth, both timers, and the DAC.
-* **--roms**: Nemesis's six YM2612 test ROMs, run on the board.
-* **--games**: five commercial cartridges, run on the board.
-
-The ROM and game streams are the *board's own*: the writes its YM2612 received, at
-the internal cycle it received them on, so a difference would be the board's
-scheduling as much as the chip's.
+* **--streams**: every event file in ``validation/streams/`` -- Nemesis's six YM2612
+  test ROMs and five commercial cartridges, as megadrive-python's board fed them to its
+  chip, exported by ``scripts/export_board_streams.py`` (local; derived from ROMs).
 """
 
 from __future__ import annotations
 
 import argparse
-import hashlib
+import json
 import random
 import sys
+import tempfile
 import time
-import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-import audio_refs
+import referees
 
-from megadrive_python.machine import YM2612 as FM_DISCRETE
-from megadrive_python.machine import YM3438_ASIC
-from megadrive_python.ym2612 import YM2612
+from ym2612_python import YM2612, YM3438_ASIC
+from ym2612_python import YM2612_DISCRETE as FM_DISCRETE
 
 ROOT = Path(__file__).resolve().parent.parent
-ROMS = ROOT / "tests" / "test_roms"
-CARTS = Path("/data/emu/roms/megadrive")
-
-#: The five cartridges the earlier milestones are measured on, with the buttons and
-#: length each needs to get its sound driver going.
-GAMES = [
-    ("Sonic The Hedgehog (USA, Europe).zip", "start", (120,), 720),
-    ("Streets of Rage 2 (USA).zip", "start", (240,), 720),
-    # Gunstar Heroes wants Start twice -- title, then mode select -- and does not
-    # reach its music inside 720 frames (docs/worklog.md, milestone 4).
-    ("Gunstar Heroes (USA).zip", "start", (200, 400, 600), 1200),
-    ("Castlevania - Bloodlines (USA).zip", "start", (240,), 720),
-    ("Phantasy Star IV (USA).zip", "start", (240,), 720),
-]
-
-#: Nemesis's YM2612 test ROMs (docs/validation.md, "Sound").
-TEST_ROMS = [
-    "ym2612csmmode.bin",
-    "ym2612ssg-eg.bin",
-    "ym2612attackandrelease.bin",
-    "ym2612detune.bin",
-    "ym2612multiplexing.bin",
-    "ym2612FrequencyWriteOrder.bin",
-]
+STREAMS = ROOT / "validation" / "streams"
 
 
 # -- building streams ----------------------------------------------------------------
@@ -222,15 +194,6 @@ def stream_dac() -> list[tuple[int, int, int]]:
     return events
 
 
-def load_image(path: Path) -> bytes:
-    if path.suffix.lower() == ".zip":
-        with zipfile.ZipFile(path) as archive:
-            for name in archive.namelist():
-                if Path(name).suffix.lower() in (".md", ".gen", ".bin", ".smd"):
-                    return archive.read(name)
-    return path.read_bytes()
-
-
 # -- comparing ------------------------------------------------------------------------
 
 
@@ -257,7 +220,7 @@ def replay(events: list[tuple[int, int, int]], cycles: int, variant):
 
 def compare_nuked(name: str, events, cycles: int, tmp: Path, variant, vname: str) -> bool:
     started = time.perf_counter()
-    ref_l, ref_r, ref_s = audio_refs.run_opn2(events, cycles, tmp, variant=vname)
+    ref_l, ref_r, ref_s = referees.run_opn2(events, cycles, tmp, variant=vname)
     first: dict[str, tuple[int, int, int]] = {}
     counts = {"MOL": 0, "MOR": 0, "status": 0}
     for cycle, (left, right, status) in enumerate(replay(events, cycles, variant)):
@@ -276,7 +239,7 @@ def compare_nuked(name: str, events, cycles: int, tmp: Path, variant, vname: str
     for label, (cycle, ref, mine) in first.items():
         print(
             f"  {vname:8s} {label}: {counts[label]:,} of {cycles:,} differ, "
-            f"first at cycle {cycle:,} (referee {ref}, board {mine})"
+            f"first at cycle {cycle:,} (referee {ref}, this chip {mine})"
         )
     return False
 
@@ -301,13 +264,13 @@ def compare_lle(name: str, events, cycles: int, tmp: Path) -> bool:
 
     So: sum each model's DAC over a sample, fit one phase and one whole-sample lag
     over the run, and report how many samples then differ.  LLE's pins carry the
-    9-bit value Nuked multiplies by three (``ym3438.c`` line 987), so the board's sum
+    9-bit value Nuked multiplies by three (``ym3438.c`` line 987), so this chip's sum
     is divided by three and LLE's 144 chip clocks by six.
     """
     clocks = cycles * 6
     lle_events = [(cycle * 6, port, data) for cycle, port, data in events]
     started = time.perf_counter()
-    ref_l, _ref_r = audio_refs.run_lle(lle_events, clocks, tmp)
+    ref_l, _ref_r = referees.run_lle(lle_events, clocks, tmp)
     mine = list(replay(events, cycles, FM_DISCRETE))
     mine_l = [sample[0] for sample in mine]
     del mine
@@ -413,10 +376,12 @@ def ladder_report(tmp: Path, recording: Path | None) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    parser.add_argument("--roms", action="store_true", help="also Nemesis's test ROMs")
-    parser.add_argument("--games", action="store_true", help="also five cartridges")
+    parser.add_argument(
+        "--streams", action="store_true", help="also the event files in validation/streams/"
+    )
+    parser.add_argument("--only", help="run only the streams whose name contains this")
     parser.add_argument("--lle", action="store_true", help="also YM2608-LLE (slow)")
-    parser.add_argument("--tmp", type=Path, default=Path("/tmp"))
+    parser.add_argument("--tmp", type=Path, default=Path(tempfile.gettempdir()))
     parser.add_argument("--tail", type=int, default=24 * 500, help="cycles to run on")
     parser.add_argument(
         "--ladder",
@@ -442,34 +407,20 @@ def main(argv: list[str] | None = None) -> int:
         ("both timers", stream_timers()),
         ("the DAC", stream_dac()),
     ]
-    if args.roms:
-        from megadrive_python.io import BUTTONS
-
-        for name in TEST_ROMS:
-            path = ROMS / "nemesis" / name
-            if not path.exists():
-                print(f"{name}: missing (scripts/fetch_references.py)")
-                continue
-            image = path.read_bytes()
-            digest = hashlib.sha256(image).hexdigest()[:16]
-            writes, _psg, cycles, _clock = audio_refs.capture_streams(
-                image, 400, press=BUTTONS["start"], press_at=120
+    if args.streams:
+        files = sorted(STREAMS.glob("*.bin"))
+        if not files:
+            print("validation/streams/ is empty (scripts/export_board_streams.py)")
+        for path in files:
+            meta = json.loads(path.with_suffix(".json").read_text())
+            events = referees.read_events(path)
+            label = (
+                f"{meta['name']} ({meta['sha256'][:16]}, {meta['frames']} frames, "
+                f"{meta['writes']:,} writes)"
             )
-            streams.append((f"{name} ({digest}, 400 frames, {len(writes):,} writes)", writes))
-    if args.games:
-        from megadrive_python.io import BUTTONS
-
-        for name, button, press_at, frames in GAMES:
-            path = CARTS / name
-            if not path.exists():
-                print(f"{name}: missing")
-                continue
-            image = load_image(path)
-            digest = hashlib.sha256(image).hexdigest()[:16]
-            writes, _psg, cycles, _clock = audio_refs.capture_streams(
-                image, frames, press=BUTTONS[button], press_at=press_at
-            )
-            streams.append((f"{name} ({digest}, {frames} frames, {len(writes):,} writes)", writes))
+            streams.append((label, events))
+    if args.only:
+        streams = [(name, events) for name, events in streams if args.only in name]
 
     failures = 0
     for name, events in streams:

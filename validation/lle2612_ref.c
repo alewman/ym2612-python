@@ -1,7 +1,7 @@
 /* A headless harness around YM2608-LLE's YM2612 path (reference/src/YM2608-LLE,
  * GPL-2.0, pinned at 7a2aca7; `fmopna_2612.c` is the NMOS YM2612 from HardWareMan's
  * die shot), built by validation/build_referees.sh and run as a referee.  Nothing of
- * YM2608-LLE is copied into megadrive-python: this file only drives its pins.
+ * YM2608-LLE is copied into ym2612-python: this file only drives its pins.
  *
  *   lle2612_ref <events.bin> <out.bin> <chip_clocks> [every]
  *

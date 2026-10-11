@@ -1,6 +1,6 @@
 /* A headless harness around Nuked-OPN2 (reference/src/Nuked-OPN2, LGPL-2.1, pinned
  * at 335747d), built by validation/build_referees.sh and run as a referee.  Nothing
- * of Nuked-OPN2 is copied into megadrive-python: this file only drives it.
+ * of Nuked-OPN2 is copied into ym2612-python: this file only drives it.
  *
  *   opn2_ref <events.bin> <out.bin> <cycles> <ym2612|ym3438> [every]
  *
