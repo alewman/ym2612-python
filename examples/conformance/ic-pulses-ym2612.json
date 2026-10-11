@@ -1,0 +1,1316 @@
+{
+ "version": 1,
+ "name": "ic-pulses-ym2612",
+ "variant": "ym2612",
+ "ticks": 374849,
+ "events": [
+  {
+   "t": 336,
+   "kind": "write",
+   "port": 0,
+   "data": 176
+  },
+  {
+   "t": 840,
+   "kind": "write",
+   "port": 1,
+   "data": 7
+  },
+  {
+   "t": 1344,
+   "kind": "write",
+   "port": 0,
+   "data": 180
+  },
+  {
+   "t": 1848,
+   "kind": "write",
+   "port": 1,
+   "data": 192
+  },
+  {
+   "t": 2352,
+   "kind": "write",
+   "port": 0,
+   "data": 164
+  },
+  {
+   "t": 2856,
+   "kind": "write",
+   "port": 1,
+   "data": 34
+  },
+  {
+   "t": 3360,
+   "kind": "write",
+   "port": 0,
+   "data": 160
+  },
+  {
+   "t": 3864,
+   "kind": "write",
+   "port": 1,
+   "data": 105
+  },
+  {
+   "t": 4368,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 4872,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 9408,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 9428,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 9828,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 12852,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 13356,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 17893,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 17913,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 18019,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 21042,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 21546,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 26084,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 26104,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 28604,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 31626,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 32130,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 36669,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 36689,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 36711,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 39732,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 40236,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 44776,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 44796,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 44818,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 47838,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 48342,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 52883,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 52903,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 52925,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 55944,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 56448,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 60990,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 61010,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 61410,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 64428,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 64932,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 69475,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 69495,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 69517,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 72534,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 73038,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 77582,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 77602,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 77708,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 80724,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 81228,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 85773,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 85793,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 85815,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 88830,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 89334,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 93880,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 93900,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 93922,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 96936,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 97440,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 101987,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 102007,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 104507,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 107520,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 108024,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 112572,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 112592,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 115092,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 118104,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 118608,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 123157,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 123177,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 123199,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 126210,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 126714,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 131264,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 131284,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 131390,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 134400,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 134904,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 139455,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 139475,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 139497,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 142506,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 143010,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 147562,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 147582,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 150082,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 153090,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 153594,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 158147,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 158167,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 158189,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 161196,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 161700,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 166254,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 166274,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 166296,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 169302,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 169806,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 174361,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 174381,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 174487,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 177492,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 177996,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 182552,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 182572,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 182594,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 185598,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 186102,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 190659,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 190679,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 193179,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 196182,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 196686,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 201244,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 201264,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 201286,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 204288,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 204792,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 209351,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 209371,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 209477,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 212478,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 212982,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 217542,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 217562,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 217584,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 220584,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 221088,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 225649,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 225669,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 225775,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 228774,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 229278,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 233840,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 233860,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 234260,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 237258,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 237762,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 242325,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 242345,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 244845,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 247842,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 248346,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 252910,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 252930,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 253036,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 256032,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 256536,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 261101,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 261121,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 261143,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 264138,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 264642,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 269208,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 269228,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 269628,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 272622,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 273126,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 277693,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 277713,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 277819,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 280812,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 281316,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 285884,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 285904,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 285926,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 288918,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 289422,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 293991,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 294011,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 294117,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 297108,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 297612,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 302182,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 302202,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 302602,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 305592,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 306096,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 310667,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 310687,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 310709,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 313698,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 314202,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 318774,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 318794,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 318816,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 321804,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 322308,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 326881,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 326901,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 326923,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 329910,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 330414,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 334988,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 335008,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 335114,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 338100,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 338604,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 343179,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 343199,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 345699,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  },
+  {
+   "t": 348684,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 349188,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 353764,
+   "kind": "ic",
+   "held": true,
+   "lag": 3
+  },
+  {
+   "t": 353784,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 356284,
+   "kind": "ic",
+   "held": false,
+   "lag": 3
+  },
+  {
+   "t": 359268,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 359772,
+   "kind": "write",
+   "port": 1,
+   "data": 240
+  },
+  {
+   "t": 364349,
+   "kind": "ic",
+   "held": true,
+   "lag": 0
+  },
+  {
+   "t": 364369,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 364769,
+   "kind": "ic",
+   "held": false,
+   "lag": 0
+  }
+ ]
+}

@@ -1,0 +1,429 @@
+{
+ "version": 1,
+ "name": "quiet-timers-ym3438",
+ "variant": "ym3438",
+ "enabled": false,
+ "ticks": 202092,
+ "events": [
+  {
+   "t": 336,
+   "kind": "write",
+   "port": 0,
+   "data": 36
+  },
+  {
+   "t": 840,
+   "kind": "write",
+   "port": 1,
+   "data": 252
+  },
+  {
+   "t": 1344,
+   "kind": "write",
+   "port": 0,
+   "data": 37
+  },
+  {
+   "t": 1848,
+   "kind": "write",
+   "port": 1,
+   "data": 0
+  },
+  {
+   "t": 2352,
+   "kind": "write",
+   "port": 0,
+   "data": 38
+  },
+  {
+   "t": 2856,
+   "kind": "write",
+   "port": 1,
+   "data": 254
+  },
+  {
+   "t": 3360,
+   "kind": "write",
+   "port": 0,
+   "data": 39
+  },
+  {
+   "t": 3864,
+   "kind": "write",
+   "port": 1,
+   "data": 63
+  },
+  {
+   "t": 7403,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 10438,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 13473,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 16508,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 19543,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 22578,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 25613,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 28648,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 31683,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 34718,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 34718,
+   "kind": "write",
+   "port": 0,
+   "data": 39
+  },
+  {
+   "t": 35222,
+   "kind": "write",
+   "port": 1,
+   "data": 63
+  },
+  {
+   "t": 38761,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 41796,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 44831,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 47866,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 50901,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 53936,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 56971,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 60006,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 63041,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 66076,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 66076,
+   "kind": "write",
+   "port": 0,
+   "data": 39
+  },
+  {
+   "t": 66580,
+   "kind": "write",
+   "port": 1,
+   "data": 63
+  },
+  {
+   "t": 70119,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 73154,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 76189,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 79224,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 82259,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 85294,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 88329,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 91364,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 94399,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 97434,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 97434,
+   "kind": "write",
+   "port": 0,
+   "data": 39
+  },
+  {
+   "t": 97938,
+   "kind": "write",
+   "port": 1,
+   "data": 63
+  },
+  {
+   "t": 101477,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 104512,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 107547,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 110582,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 113617,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 116652,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 119687,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 122722,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 125757,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 128792,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 128792,
+   "kind": "write",
+   "port": 0,
+   "data": 39
+  },
+  {
+   "t": 129296,
+   "kind": "write",
+   "port": 1,
+   "data": 63
+  },
+  {
+   "t": 132835,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 135870,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 138905,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 141940,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 144975,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 148010,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 151045,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 154080,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 157115,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 160150,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 160150,
+   "kind": "write",
+   "port": 0,
+   "data": 39
+  },
+  {
+   "t": 160654,
+   "kind": "write",
+   "port": 1,
+   "data": 63
+  },
+  {
+   "t": 164193,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 167228,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 170263,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 173298,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 176333,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 179368,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 182403,
+   "kind": "read",
+   "port": 0
+  },
+  {
+   "t": 185438,
+   "kind": "read",
+   "port": 1
+  },
+  {
+   "t": 188473,
+   "kind": "read",
+   "port": 2
+  },
+  {
+   "t": 191508,
+   "kind": "read",
+   "port": 3
+  },
+  {
+   "t": 191508,
+   "kind": "write",
+   "port": 0,
+   "data": 39
+  },
+  {
+   "t": 192012,
+   "kind": "write",
+   "port": 1,
+   "data": 63
+  }
+ ]
+}
