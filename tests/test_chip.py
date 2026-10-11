@@ -224,3 +224,13 @@ def test_ym2612_matches_nuked_opn2() -> None:
     )  # fmt: skip
     assert result.returncode == 0, result.stdout + result.stderr
     assert "0 comparisons not identical" in result.stdout
+
+
+def test_the_readme_example_makes_a_sound() -> None:
+    """examples/minimal_host.py is the README's host, verbatim; it must sound."""
+    import runpy
+
+    result = runpy.run_path(str(ROOT / "examples" / "minimal_host.py"))
+    samples = result["samples"]
+    assert len(samples) > 5000
+    assert max(abs(left) for left, _right in samples) > 500
