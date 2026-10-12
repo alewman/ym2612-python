@@ -28,7 +28,7 @@ conformance kit is the next step.
 | BUSY's length and ports | 32 cycles; port 0 only on the discrete chip | hardware-captured |
 | The output stage against YM2608-LLE (the NMOS die) | identical at the native rate where the harnesses compare; one placement difference classified | die-derived (detector) |
 | The ladder against a Model 1 recording | plateaus at 36-37 dB (hardware: 33 dB); the ASIC does not | hardware-captured (shape) |
-| 31 seeded faults | 31 caught (30 by the conformance examples alone) | not an oracle |
+| 33 seeded faults | 33 caught (32 by the conformance examples alone) | not an oracle |
 
 What each result supports, and how strongly, is [docs/claims.md](docs/claims.md).
 The runs, with commands and commits, are [docs/validation.md](docs/validation.md).
@@ -95,7 +95,7 @@ python -m ym2612_python.conformance diff examples/conformance/voices-ym2612.json
 
 A manifest names the variant and the timed writes, reads and /IC events. The trace
 has a line for every internal cycle (the slot, both pins, status, IRQ, or *held*)
-and one for every read. Thirteen example manifests ship with reference traces, ten of
+and one for every read. Fifteen example manifests ship with reference traces, twelve of
 them checked against Nuked-OPN2 by the tests. See
 [docs/conformance.md](docs/conformance.md).
 

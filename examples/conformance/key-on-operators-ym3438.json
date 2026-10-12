@@ -1,0 +1,560 @@
+{
+ "version": 1,
+ "name": "key-on-operators-ym3438",
+ "variant": "ym3438",
+ "ticks": 701400,
+ "events": [
+  {
+   "t": 336,
+   "kind": "write",
+   "port": 0,
+   "data": 49
+  },
+  {
+   "t": 840,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 1344,
+   "kind": "write",
+   "port": 0,
+   "data": 65
+  },
+  {
+   "t": 1848,
+   "kind": "write",
+   "port": 1,
+   "data": 4
+  },
+  {
+   "t": 2352,
+   "kind": "write",
+   "port": 0,
+   "data": 81
+  },
+  {
+   "t": 2856,
+   "kind": "write",
+   "port": 1,
+   "data": 31
+  },
+  {
+   "t": 3360,
+   "kind": "write",
+   "port": 0,
+   "data": 97
+  },
+  {
+   "t": 3864,
+   "kind": "write",
+   "port": 1,
+   "data": 0
+  },
+  {
+   "t": 4368,
+   "kind": "write",
+   "port": 0,
+   "data": 129
+  },
+  {
+   "t": 4872,
+   "kind": "write",
+   "port": 1,
+   "data": 15
+  },
+  {
+   "t": 5376,
+   "kind": "write",
+   "port": 0,
+   "data": 53
+  },
+  {
+   "t": 5880,
+   "kind": "write",
+   "port": 1,
+   "data": 3
+  },
+  {
+   "t": 6384,
+   "kind": "write",
+   "port": 0,
+   "data": 69
+  },
+  {
+   "t": 6888,
+   "kind": "write",
+   "port": 1,
+   "data": 4
+  },
+  {
+   "t": 7392,
+   "kind": "write",
+   "port": 0,
+   "data": 85
+  },
+  {
+   "t": 7896,
+   "kind": "write",
+   "port": 1,
+   "data": 31
+  },
+  {
+   "t": 8400,
+   "kind": "write",
+   "port": 0,
+   "data": 101
+  },
+  {
+   "t": 8904,
+   "kind": "write",
+   "port": 1,
+   "data": 0
+  },
+  {
+   "t": 9408,
+   "kind": "write",
+   "port": 0,
+   "data": 133
+  },
+  {
+   "t": 9912,
+   "kind": "write",
+   "port": 1,
+   "data": 15
+  },
+  {
+   "t": 10416,
+   "kind": "write",
+   "port": 0,
+   "data": 57
+  },
+  {
+   "t": 10920,
+   "kind": "write",
+   "port": 1,
+   "data": 5
+  },
+  {
+   "t": 11424,
+   "kind": "write",
+   "port": 0,
+   "data": 73
+  },
+  {
+   "t": 11928,
+   "kind": "write",
+   "port": 1,
+   "data": 4
+  },
+  {
+   "t": 12432,
+   "kind": "write",
+   "port": 0,
+   "data": 89
+  },
+  {
+   "t": 12936,
+   "kind": "write",
+   "port": 1,
+   "data": 31
+  },
+  {
+   "t": 13440,
+   "kind": "write",
+   "port": 0,
+   "data": 105
+  },
+  {
+   "t": 13944,
+   "kind": "write",
+   "port": 1,
+   "data": 0
+  },
+  {
+   "t": 14448,
+   "kind": "write",
+   "port": 0,
+   "data": 137
+  },
+  {
+   "t": 14952,
+   "kind": "write",
+   "port": 1,
+   "data": 15
+  },
+  {
+   "t": 15456,
+   "kind": "write",
+   "port": 0,
+   "data": 61
+  },
+  {
+   "t": 15960,
+   "kind": "write",
+   "port": 1,
+   "data": 7
+  },
+  {
+   "t": 16464,
+   "kind": "write",
+   "port": 0,
+   "data": 77
+  },
+  {
+   "t": 16968,
+   "kind": "write",
+   "port": 1,
+   "data": 4
+  },
+  {
+   "t": 17472,
+   "kind": "write",
+   "port": 0,
+   "data": 93
+  },
+  {
+   "t": 17976,
+   "kind": "write",
+   "port": 1,
+   "data": 31
+  },
+  {
+   "t": 18480,
+   "kind": "write",
+   "port": 0,
+   "data": 109
+  },
+  {
+   "t": 18984,
+   "kind": "write",
+   "port": 1,
+   "data": 0
+  },
+  {
+   "t": 19488,
+   "kind": "write",
+   "port": 0,
+   "data": 141
+  },
+  {
+   "t": 19992,
+   "kind": "write",
+   "port": 1,
+   "data": 15
+  },
+  {
+   "t": 20496,
+   "kind": "write",
+   "port": 0,
+   "data": 177
+  },
+  {
+   "t": 21000,
+   "kind": "write",
+   "port": 1,
+   "data": 7
+  },
+  {
+   "t": 21504,
+   "kind": "write",
+   "port": 0,
+   "data": 181
+  },
+  {
+   "t": 22008,
+   "kind": "write",
+   "port": 1,
+   "data": 192
+  },
+  {
+   "t": 22512,
+   "kind": "write",
+   "port": 0,
+   "data": 165
+  },
+  {
+   "t": 23016,
+   "kind": "write",
+   "port": 1,
+   "data": 34
+  },
+  {
+   "t": 23520,
+   "kind": "write",
+   "port": 0,
+   "data": 161
+  },
+  {
+   "t": 24024,
+   "kind": "write",
+   "port": 1,
+   "data": 105
+  },
+  {
+   "t": 24528,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 25032,
+   "kind": "write",
+   "port": 1,
+   "data": 17
+  },
+  {
+   "t": 65856,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 66360,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 87024,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 87528,
+   "kind": "write",
+   "port": 1,
+   "data": 33
+  },
+  {
+   "t": 128352,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 128856,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 149520,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 150024,
+   "kind": "write",
+   "port": 1,
+   "data": 65
+  },
+  {
+   "t": 190848,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 191352,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 212016,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 212520,
+   "kind": "write",
+   "port": 1,
+   "data": 129
+  },
+  {
+   "t": 253344,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 253848,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 274512,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 275016,
+   "kind": "write",
+   "port": 1,
+   "data": 49
+  },
+  {
+   "t": 315840,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 316344,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 337008,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 337512,
+   "kind": "write",
+   "port": 1,
+   "data": 97
+  },
+  {
+   "t": 378336,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 378840,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 399504,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 400008,
+   "kind": "write",
+   "port": 1,
+   "data": 193
+  },
+  {
+   "t": 440832,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 441336,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 462000,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 462504,
+   "kind": "write",
+   "port": 1,
+   "data": 81
+  },
+  {
+   "t": 503328,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 503832,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 524496,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 525000,
+   "kind": "write",
+   "port": 1,
+   "data": 161
+  },
+  {
+   "t": 565824,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 566328,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 586992,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 587496,
+   "kind": "write",
+   "port": 1,
+   "data": 145
+  },
+  {
+   "t": 628320,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 628824,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  },
+  {
+   "t": 649488,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 649992,
+   "kind": "write",
+   "port": 1,
+   "data": 241
+  },
+  {
+   "t": 690816,
+   "kind": "write",
+   "port": 0,
+   "data": 40
+  },
+  {
+   "t": 691320,
+   "kind": "write",
+   "port": 1,
+   "data": 1
+  }
+ ]
+}

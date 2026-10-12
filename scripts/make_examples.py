@@ -153,6 +153,54 @@ def voices() -> list[dict]:
     return events
 
 
+def lfo_slowest() -> list[dict]:
+    """The LFO at its slowest speed, whose counter reloads every 109 samples (the
+    others reload sooner), on one voice with the deepest PM and AM. The speed's
+    reload is reached only here and in the synthetic streams' LFO sweep."""
+    events: list[dict] = []
+    t = 8 * TICK
+    for op in range(4):
+        for register, value in ((0x30, 0x01), (0x40, 0x7F if op < 3 else 0x00),
+                                (0x50, 0x1F), (0x60, 0x80), (0x80, 0x0F)):  # fmt: skip
+            t = _write(events, t, register + op * 4, value)
+    t = _write(events, t, 0xB0, 0x07)
+    t = _write(events, t, 0xB4, 0xC0 | 3 << 4 | 7)  # AMS 3, PMS 7
+    t = _write(events, t, 0xA4, 0x3A)
+    t = _write(events, t, 0xA0, 0xFF)
+    t = _write(events, t, 0x22, 0x08)  # the LFO on, speed 0
+    t = _write(events, t, 0x28, 0xF0)
+    t += 24 * 600 * TICK
+    t = _write(events, t, 0x22, 0x08 | 1)  # the next speed, briefly
+    t += 24 * 160 * TICK
+    t = _write(events, t, 0x22, 0x08)
+    t += 24 * 240 * TICK
+    _write(events, t, 0x28, 0x00)
+    return events
+
+
+def key_on_operators() -> list[dict]:
+    """Each of $28's four operator bits alone, then in pairs, on one channel whose
+    operators are all carriers at different multipliers, so which operator a bit
+    keys shows in the output. The bits name operators 1-4; the slots run 1, 3, 2, 4,
+    which is the order a port can get wrong."""
+    events: list[dict] = []
+    t = 8 * TICK
+    for op in range(4):
+        for register, value in ((0x30, 0x01 + 2 * op), (0x40, 0x04), (0x50, 0x1F),
+                                (0x60, 0x00), (0x80, 0x0F)):  # fmt: skip
+            t = _write(events, t, register + op * 4 + 1, value)
+    t = _write(events, t, 0xB1, 0x07)  # channel 2, algorithm 7
+    t = _write(events, t, 0xB5, 0xC0)
+    t = _write(events, t, 0xA5, 0x22)
+    t = _write(events, t, 0xA1, 0x69)
+    for bits in (0x1, 0x2, 0x4, 0x8, 0x3, 0x6, 0xC, 0x5, 0xA, 0x9, 0xF):
+        t = _write(events, t, 0x28, bits << 4 | 1)
+        t += 24 * 40 * TICK
+        t = _write(events, t, 0x28, 0x01)
+        t += 24 * 20 * TICK
+    return events
+
+
 def ssg_eg_short() -> list[dict]:
     events: list[dict] = []
     t = 8 * TICK
@@ -239,6 +287,8 @@ MANIFESTS = [
     ("voices-ym2612", "ym2612", voices, {}),
     ("voices-ym3438", "ym3438", voices, {}),
     ("ssg-eg-ym3438", "ym3438", ssg_eg_short, {}),
+    ("lfo-slowest-ym2612", "ym2612", lfo_slowest, {}),
+    ("key-on-operators-ym3438", "ym3438", key_on_operators, {}),
     ("status-reads-ym2612", "ym2612", status_reads, {}),
     ("status-reads-ym3438", "ym3438", status_reads, {}),
     ("timer-control-delay-ym2612", "ym2612", status_reads, {"control_delay": 2}),

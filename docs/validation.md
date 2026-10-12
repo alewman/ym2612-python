@@ -161,13 +161,18 @@ sum to less. The die has the clamp, so the code keeps it.
 
 ### Seeded faults
 
-`python scripts/mutation.py` breaks one rule at a time, 31 in all: BUSY, the timers,
+`python scripts/mutation.py` breaks one rule at a time, 33 in all: BUSY, the timers,
 pans, the ladder, the DAC, the multiplier, the sustain level, $A4, feedback, detune,
 the LFO, SSG-EG, rate 31, CSM, channel 3's mode, the accumulator clamp, the status
 decay and ports, /IC, the timer delay, and the log-sin table.
-- **Examples plus the rule tests:** 31 caught.
-- **Examples alone,** which is all a port has (`--examples-only`): 30 caught. The
+- **Examples plus the rule tests:** 33 caught.
+- **Examples alone,** which is all a port has (`--examples-only`): 32 caught. The
   status decay needs 300,000 cycles without a read, too long for a committed trace.
+
+Two of the 33 came from ym2612-rust's own seeded faults (2026-10-11): the slowest
+LFO speed's reload and the order of key-on's operators 2 and 3. Until the examples
+`lfo-slowest-ym2612` and `key-on-operators-ym3438` were added, a port that stopped at
+the examples would have missed both; the synthetic streams always caught them.
 
 ### Speed
 
