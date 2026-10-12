@@ -83,10 +83,10 @@ the reference trace.
 
 ## The examples
 
-`examples/conformance/` holds thirteen manifests with their reference traces, written by
+`examples/conformance/` holds fifteen manifests with their reference traces, written by
 `scripts/make_examples.py`. `tests/test_conformance.py` checks two things. First,
 that this chip still writes every trace. Second, with the referee built, that the
-ten examples Nuked-OPN2 can model (generator on, no /IC, no timer delay) agree with
+twelve examples Nuked-OPN2 can model (generator on, no /IC, no timer delay) agree with
 it on every `C` line. The examples are therefore themselves referee-checked, not
 just this chip's say-so.
 
@@ -97,6 +97,8 @@ just this chip's say-so.
 | `corners-ym2612`, `corners-ym3438` | the LSI test registers $21 and $2C (and the test read), the SSG's absent $00-$0F, key-on bytes naming no channel, re-keys, reads on every port |
 | `dac-ym2612` | the DAC enable, a value ramp, the ninth bit |
 | `ssg-eg-ym3438` | SSG-EG's eight shapes |
+| `lfo-slowest-ym2612` | the LFO's slowest speed (its counter reload of 108), PMS 7 and AMS 3, and a switch to the next speed and back |
+| `key-on-operators-ym3438` | each of $28's operator bits alone and in pairs, on four carriers at different multipliers: which operator each bit keys (the slots run 1, 3, 2, 4) |
 | `status-reads-ym2612`, `status-reads-ym3438` | BUSY and both timer flags read on every port at ticks inside cycles (the variants differ on ports 1-3) |
 | `timer-control-delay-ym2612` | the same with register $27 delayed two cycles (megadrive-python's die-figures machine) |
 | `ic-pulses-ym2612` | /IC asserted at all 42 ticks of a cycle, both lags, pulses of 1, 3, 10 and 60 cycles, a write ignored while held |
